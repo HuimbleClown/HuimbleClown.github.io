@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    基于hexo搭建个人网站（mac版） |
+    
+    Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-blog" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      基于hexo搭建个人网站（mac版）
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2018/05/11/blog/" class="article-date">
+  <time datetime="2018-05-11T10:48:51.000Z" itemprop="datePublished">2018-05-11</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h6 id="个别图源：简书-小pxu"><a href="#个别图源：简书-小pxu" class="headerlink" title="个别图源：简书 小pxu"></a>个别图源：简书 小pxu</h6><h1 id="写在开头："><a href="#写在开头：" class="headerlink" title="写在开头："></a>写在开头：</h1><p>非计算机专业的小伙伴们可能觉得搭建网站是一件很复杂很难的事情。确实自己纯手工去敲确实是一件很麻烦也很烧脑（至少对我这个菜鸟来说是这样,毕竟我也是非计算机ZZZ）。但其实有很多开源的平台可以让我们去利用。一个网站通常需要域名、服务器（空间）、DNS域名解析、网站程序、数据库…等等东西，当然不同的网站构成是不同的。我在这块介绍的这个方法（基于Github-hexo）对我这个没钱又想装逼的小子来说有以下优点：</p>
+<p>1、不需要域名和服务器</p>
+<p>2、访问自己博客的时候没有广告</p>
+<p>3、可以自己修改样式，能根据自己的需求加功能。</p>
+<hr>
+<p>因为我是在mac上操作的，这里就以mac为例（windows可作为参考）：</p>
+<p>如果你有GitHub账号、电脑安装了xcode、node.js等不到半小时就可以完成搭建。期待吧～</p>
+<h2 id="博客搭建的环境"><a href="#博客搭建的环境" class="headerlink" title="博客搭建的环境"></a>博客搭建的环境</h2><ol>
+<li>node.js（在node.js官网中下载安装）node.js官网</li>
+<li>git（OS系统中直接安装x-code就可以了）</li>
+<li>hexo（打开OS系统终端、输入安装hexo的代码(此处安装时有可能会提示输入系统管理员密码)</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<h2 id="hexo创建静态博客"><a href="#hexo创建静态博客" class="headerlink" title="hexo创建静态博客"></a>hexo创建静态博客</h2><ol>
+<li>新建blog文件夹</li>
+<li>在终端进入该文件夹，初始化博客<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure></li>
+<li>上述完成后，生成原始文件；blog文件夹就是博客的根目录</li>
+<li>本地查看：启用本地服务命令(退出按ctrl+c)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure></li>
+<li>将出现的地址输入浏览器，即可可查看到本地效果<h2 id="GitHub配置"><a href="#GitHub配置" class="headerlink" title="GitHub配置"></a>GitHub配置</h2></li>
+<li>注册github账号并登陆</li>
+<li>获取本机的SSH口令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1）输入获取代码，回车直到出现图片所示图形为止</span><br><span class="line">$ ssh-keygen</span><br><span class="line">2）输入编译代码</span><br><span class="line">$ vim ~&#x2F;.ssh&#x2F;id_rsa.pub</span><br><span class="line">3）出现SSH口令后，将红框部分复制，并在下方输入:q，随后按下回车可以退出该窗口</span><br><span class="line">4）进入到github页面设置SSH口令</span><br><span class="line">点击用户下拉菜单中的settings（step1)</span><br><span class="line">点击左侧的SHH and GPG keys（step2)</span><br><span class="line">在Title中输入口令名称（随意）（step3)</span><br><span class="line">在key中贴上SSH口令（step4)</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2036150-b4743c91bd07f228.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/588" alt="Alt text"><br><img src="https://upload-images.jianshu.io/upload_images/2036150-6b9131583bac9a8c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/574" alt="Alt text"><br><img src="https://upload-images.jianshu.io/upload_images/2036150-5b26c3dbd861657b.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"><br><img src="https://upload-images.jianshu.io/upload_images/2036150-ec38c7b0045abe88.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"></p>
+<h2 id="创建新的仓库"><a href="#创建新的仓库" class="headerlink" title="创建新的仓库"></a>创建新的仓库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">1）创建新的仓库（repOSitory）</span><br><span class="line">点击用户左侧的+号菜单中的New repOSitory（step1)</span><br><span class="line">在repOSitory name中输入二级域名，格式请严格遵照username.github.io（step2)</span><br><span class="line">ps：username填写github的登录用户名，否则上线的时候会报错</span><br><span class="line">是否公开选项可以选取Public（step3)</span><br><span class="line">勾选step4处，会自动生成一份可编辑的README.md文件（建议勾选）（step4)</span><br><span class="line">点击create repOSitory生成仓库完毕（step5)</span><br><span class="line">2）查看新建的仓库（repOSitory）</span><br><span class="line">可以回到github个人首页点击右侧的仓库区</span><br><span class="line">进入后在step1处选择并复制http地址，注意此时step2处应该是空的</span><br></pre></td></tr></table></figure>
+<p><img src="https://upload-images.jianshu.io/upload_images/2036150-fc479366a8b3002a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"><br><img src="https://upload-images.jianshu.io/upload_images/2036150-045abf830344e96a.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"><br><img src="https://upload-images.jianshu.io/upload_images/2036150-b8f7ddf71c2ad702.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"></p>
+<h2 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h2><ol>
+<li>设置blog配置文件</li>
+</ol>
+<p>1）打开blog文件夹下的_config.yml文件</p>
+<p>2）找到最下方的type，输入git（注意冒号后面是带空格的）</p>
+<p>3）repo行可能没有，需要自己输入，后面跟上github上仓库中复制的http地址（注意此时1、2两处应该是一样的username），不然上传时会报错<br><img src="https://upload-images.jianshu.io/upload_images/2036150-5efd9639560d3e8c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"></p>
+<p>4）其他博客设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">title：博客名称</span><br><span class="line">subtitle：博客副标题</span><br><span class="line">description：博客描述</span><br><span class="line">author：作者</span><br><span class="line">language：语言（简体中文是zh-CN）</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>在终端上传博客<br>1）进入终端，输入git上传插件安装代码（安装时会提示输入github用户名及密码）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>2）安装完毕后，输入获取代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>3）最后输入上传代码</p>
+<pre><code>$ hexo d</code></pre><p>4）重新在github仓库查看上传文件，此时在step2中会有之前bolg中生成的文件<br>5）step3处就是你的博客地址<br><img src="https://upload-images.jianshu.io/upload_images/2036150-b8f7ddf71c2ad702.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/690" alt="Alt text"></p>
+<hr>
+<h1 id="写在文末："><a href="#写在文末：" class="headerlink" title="写在文末："></a>写在文末：</h1><p>这样一来我们的博客就搭建完成了，尽管GitHub个人网站项目是免费的，但是却有一些限制（单个仓库大小不超过1GB）。总体来说，完全够用，所以目前不用担心内存问题。之后大家就可以尽情对你的个人博客进行美化以及添加内容了。</p>
+<h5 id="写完了，欢迎拍砖啊～"><a href="#写完了，欢迎拍砖啊～" class="headerlink" title="写完了，欢迎拍砖啊～"></a>写完了，欢迎拍砖啊～</h5>
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://yoursite.com/2018/05/11/blog/" data-id="ck8yazvh60003pd3mbjyrdyb5" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2018/05/18/page/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            基于深度学习的对文本分类的FastText模型
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/05/11/city/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">GPS数据智能化处理</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Hexo</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">Links</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+
+</body>
+</html>

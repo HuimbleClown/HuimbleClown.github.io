@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-29T04:37:38.000Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>D_double_h</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HUI瞎说十则</title>
+    <link href="http://yoursite.com/2019/08/27/HUI_talk/"/>
+    <id>http://yoursite.com/2019/08/27/HUI_talk/</id>
+    <published>2019-08-26T16:11:29.000Z</published>
+    <updated>2019-08-29T04:37:38.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;每每看到一些有趣的事情或者思考一个问题就想把它记录下来，微博就记录了很多我当时的思考跟想法。在这里我就节选了几条整理了一下，做个收藏也分享一下。当然后续也会有更新。注：以下不成熟的观点只代表当时的知识水平及想法，欢迎拍砖讨论。&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【P5自学笔记】基于Processing的地理可视化</title>
+    <link href="http://yoursite.com/2018/12/30/geo-p5/"/>
+    <id>http://yoursite.com/2018/12/30/geo-p5/</id>
+    <published>2018-12-30T07:03:57.000Z</published>
+    <updated>2018-12-30T14:32:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;开篇之前，先给大家介绍一个用于创建交互式地图和地理可视化的库——UNFOLDING
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基于BTM模型的《地理学报》论文摘要主题分析</title>
+    <link href="http://yoursite.com/2018/11/20/theme/"/>
+    <id>http://yoursite.com/2018/11/20/theme/</id>
+    <published>2018-11-20T13:02:33.000Z</published>
+    <updated>2019-04-09T06:24:38.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;基于BTM模型的《地理学报》论文摘要主题分析&quot;&gt;&lt;a href=&quot;#基于BTM模型的《地理学报》论文摘要主题分析&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基于主题模型与深度学习的微博文本分类及地理可视化</title>
+    <link href="http://yoursite.com/2018/09/20/text-classification/"/>
+    <id>http://yoursite.com/2018/09/20/text-classification/</id>
+    <published>2018-09-19T16:03:29.000Z</published>
+    <updated>2018-09-20T06:25:07.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>【P5自学笔记】之入门篇（1）</title>
+    <link href="http://yoursite.com/2018/06/07/P51/"/>
+    <id>http://yoursite.com/2018/06/07/P51/</id>
+    <published>2018-06-07T13:02:33.000Z</published>
+    <updated>2018-06-07T13:09:43.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;若干年前我关注一个公众号“算法艺术实验室AALab”,当时关注的原因大概就是因为它推送的东西都特别好看，大多都是一些计算机艺术视觉效果。（PS：这绝对不是广告植入）就慢慢跟着推送的project自己实战。为啥会分享这个工具，是因为之前在刷微博看到威斯康星大学麦迪逊分校的高松
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Excel地图插件-ExcelMap</title>
+    <link href="http://yoursite.com/2018/05/18/excel/"/>
+    <id>http://yoursite.com/2018/05/18/excel/</id>
+    <published>2018-05-18T12:48:25.000Z</published>
+    <updated>2018-05-18T13:57:48.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;写在开头&quot;&gt;&lt;a href=&quot;#写在开头&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基于深度学习的对文本分类的FastText模型</title>
+    <link href="http://yoursite.com/2018/05/18/page/"/>
+    <id>http://yoursite.com/2018/05/18/page/</id>
+    <published>2018-05-18T06:03:40.000Z</published>
+    <updated>2018-05-18T06:24:47.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;fasttext&quot;&gt;&lt;a href=&quot;#fasttext&quot; class=&quot;headerlink&quot; title=&quot;fasttext&quot;&gt;&lt;/a&gt;fasttext&lt;/h1&gt;&lt;p&gt;fastText 是 Facebook
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>基于hexo搭建个人网站（mac版）</title>
+    <link href="http://yoursite.com/2018/05/11/blog/"/>
+    <id>http://yoursite.com/2018/05/11/blog/</id>
+    <published>2018-05-11T10:48:51.000Z</published>
+    <updated>2018-05-11T11:41:41.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h6 id=&quot;个别图源：简书-小pxu&quot;&gt;&lt;a href=&quot;#个别图源：简书-小pxu&quot; class=&quot;headerlink&quot; title=&quot;个别图源：简书 小pxu&quot;&gt;&lt;/a&gt;个别图源：简书 小pxu&lt;/h6&gt;&lt;h1 id=&quot;写在开头：&quot;&gt;&lt;a href=&quot;#写在开头：&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GPS数据智能化处理</title>
+    <link href="http://yoursite.com/2018/05/11/city/"/>
+    <id>http://yoursite.com/2018/05/11/city/</id>
+    <published>2018-05-11T10:38:49.000Z</published>
+    <updated>2018-05-11T10:43:10.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h6 id=&quot;原载：CSDN-雨梦&quot;&gt;&lt;a href=&quot;#原载：CSDN-雨梦&quot; class=&quot;headerlink&quot; title=&quot;原载：CSDN 雨梦&quot;&gt;&lt;/a&gt;原载：CSDN
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Something About Me</title>
+    <link href="http://yoursite.com/2018/05/05/about-me/"/>
+    <id>http://yoursite.com/2018/05/05/about-me/</id>
+    <published>2018-05-05T08:15:06.000Z</published>
+    <updated>2020-04-13T10:19:11.322Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;联系方式&quot;&gt;&lt;a href=&quot;#联系方式&quot; class=&quot;headerlink&quot; title=&quot;联系方式&quot;&gt;&lt;/a&gt;联系方式&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;手机：13032931683&lt;/li&gt;
+&lt;li&gt;Email：&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>

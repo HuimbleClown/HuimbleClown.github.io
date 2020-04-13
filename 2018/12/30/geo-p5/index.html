@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    【P5自学笔记】基于Processing的地理可视化 |
+    
+    Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-geo-p5" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      【P5自学笔记】基于Processing的地理可视化
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2018/12/30/geo-p5/" class="article-date">
+  <time datetime="2018-12-30T07:03:57.000Z" itemprop="datePublished">2018-12-30</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>开篇之前，先给大家介绍一个用于创建交互式地图和地理可视化的库——UNFOLDING MAP（关于processing的介绍就不在这里赘述了）。这是目前我发现的在官网公布的由tillnagel等创建的，但由于其仅适用于processing2等以下版本。所以在此作为一个引子，感兴趣的同学可以详细了解相关介绍以及Example（<a href="http://unfoldingmaps.org/2014unfolded.html" target="_blank" rel="noopener">http://unfoldingmaps.org/2014unfolded.html</a> ）。</p>
+<h5 id="1、交互活动"><a href="#1、交互活动" class="headerlink" title="1、交互活动"></a>1、交互活动</h5><p>unfolding库可以帮助您快速创建交互式地图。包括缩放、平移等基本交互，同时可以添加更多高级功能例如：Overview + Detail。<br><img src="mt-singapore-label.png" alt=""></p>
+<h5 id="2、数据可视化"><a href="#2、数据可视化" class="headerlink" title="2、数据可视化"></a>2、数据可视化</h5><p>unfolding库可以在地图上创建地理标记。支持加载和显示用户自定义的形状，包括点、线和多边形。<br><img src="splendor-label.png" alt=""></p>
+<h5 id="3、各式各样的地图"><a href="#3、各式各样的地图" class="headerlink" title="3、各式各样的地图"></a>3、各式各样的地图</h5><p>unfolding库是一个基于图块的地图库。地图图块可以具有各种地理特征，同时可以提供例如OpenStreetMap或TileMill等图库。<br><img src="mbta-lines-label.png" alt=""></p>
+<h5 id="4、扩展代码"><a href="#4、扩展代码" class="headerlink" title="4、扩展代码"></a>4、扩展代码</h5><p>高级用户也可以创建更为复杂的可视化效果以及扩展该库的功能。</p>
+<h1 id="2D地图可视化"><a href="#2D地图可视化" class="headerlink" title="2D地图可视化"></a>2D地图可视化</h1><p><img src="1.gif" alt=""></p>
+<h4 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h4><p>该project的数据来源于USGS，采用了网站所公布的近30天的地震数据（具体可见<a href="https://earthquake.usgs.gov/）" target="_blank" rel="noopener">https://earthquake.usgs.gov/）</a> 。该网站里面有各种各样的数据，json/csv/…，提取csv数据使用loadTable的方式，能够比较方便得到想要的数据，要注意header.</p>
+<p>地图数据可以在mapbox里获取token从而导入，同时可以改变地图颜色、角度等。</p>
+<h4 id="坐标转换"><a href="#坐标转换" class="headerlink" title="坐标转换"></a>坐标转换</h4><p>要将数据点展在网络墨卡托的平面上就需要进行坐标转换。<img src="640.jpg" alt=""></p>
+<h4 id="函数应用"><a href="#函数应用" class="headerlink" title="函数应用"></a>函数应用</h4><p>在map函数中，地震mag采用分级颜色来实现。在nosie函数中，实现数据点的波动。</p>
+<h6 id="整个工程文件可见：https-github-com-HuimbleClown-p5-js-mapbox"><a href="#整个工程文件可见：https-github-com-HuimbleClown-p5-js-mapbox" class="headerlink" title="整个工程文件可见：https://github.com/HuimbleClown/p5.js-mapbox"></a>整个工程文件可见：<a href="https://github.com/HuimbleClown/p5.js-mapbox" target="_blank" rel="noopener">https://github.com/HuimbleClown/p5.js-mapbox</a></h6><h1 id="3D地图可视化"><a href="#3D地图可视化" class="headerlink" title="3D地图可视化"></a>3D地图可视化</h1><p><img src="2.gif" alt=""><br>掌握使用processing画3D图形，这个就容易多了。</p>
+<h4 id="数据来源-1"><a href="#数据来源-1" class="headerlink" title="数据来源"></a>数据来源</h4><p>该project的数据同上依旧来源于USGS。</p>
+<p>贴图数据来源于NASA，也是基于墨卡托投影。该网站（<a href="https://www.nasa.gov/）" target="_blank" rel="noopener">https://www.nasa.gov/）</a> 有各类不同样式的地图可供选择。</p>
+<h4 id="坐标转换（同上）"><a href="#坐标转换（同上）" class="headerlink" title="坐标转换（同上）"></a>坐标转换（同上）</h4><h4 id="数据展示"><a href="#数据展示" class="headerlink" title="数据展示"></a>数据展示</h4><p>不同的高度代表不同的地震mag。设置坐标轴，只需控制Z轴长度即可。</p>
+<h6 id="整个工程文件可见：https-github-com-HuimbleClown-earthquake3d"><a href="#整个工程文件可见：https-github-com-HuimbleClown-earthquake3d" class="headerlink" title="整个工程文件可见：https://github.com/HuimbleClown/earthquake3d"></a>整个工程文件可见：<a href="https://github.com/HuimbleClown/earthquake3d" target="_blank" rel="noopener">https://github.com/HuimbleClown/earthquake3d</a></h6><h1 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h1><p>更多的实践，可以持续关注我的更新。processing在国内可供学习的资源相对比较少，希望可以做更多的工作，让大家能够多一种选择。Thanks。若需转载或咨询请联系作者（WeChat：danghui629）</p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://yoursite.com/2018/12/30/geo-p5/" data-id="ck8yazvhz0008pd3m3ltpb6h9" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2019/08/27/HUI_talk/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            HUI瞎说十则
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/11/20/theme/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">基于BTM模型的《地理学报》论文摘要主题分析</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Hexo</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">Links</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    基于主题模型与深度学习的微博文本分类及地理可视化 |
+    
+    Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-text-classification" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      基于主题模型与深度学习的微博文本分类及地理可视化
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2018/09/20/text-classification/" class="article-date">
+  <time datetime="2018-09-19T16:03:29.000Z" itemprop="datePublished">2018-09-20</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h5 id="毕业近两个月了，现在才想起来把毕业设计做的东西以博客的形式发出来，记得之前-爱可可—爱生活-老师分享加州大学圣地亚哥分校的Fhilip-J-Guo教授对要求，“每篇发表的科研论文，最好都能配有一篇摘要博客文章，我试图对博士后发表的所有文章要求做到这一点（有时一篇博客里会包含几篇文章），我鼓励学生们也这样做，会有10-100x的人会阅读博客”。虽然这篇本科毕业论文不涉及发表，我也试图这样做。不仅是对之前所做工作的总结，也丰富一下自己的博客目录。"><a href="#毕业近两个月了，现在才想起来把毕业设计做的东西以博客的形式发出来，记得之前-爱可可—爱生活-老师分享加州大学圣地亚哥分校的Fhilip-J-Guo教授对要求，“每篇发表的科研论文，最好都能配有一篇摘要博客文章，我试图对博士后发表的所有文章要求做到这一点（有时一篇博客里会包含几篇文章），我鼓励学生们也这样做，会有10-100x的人会阅读博客”。虽然这篇本科毕业论文不涉及发表，我也试图这样做。不仅是对之前所做工作的总结，也丰富一下自己的博客目录。" class="headerlink" title="毕业近两个月了，现在才想起来把毕业设计做的东西以博客的形式发出来，记得之前@爱可可—爱生活 老师分享加州大学圣地亚哥分校的Fhilip J.Guo教授对要求，“每篇发表的科研论文，最好都能配有一篇摘要博客文章，我试图对博士后发表的所有文章要求做到这一点（有时一篇博客里会包含几篇文章），我鼓励学生们也这样做，会有10-100x的人会阅读博客”。虽然这篇本科毕业论文不涉及发表，我也试图这样做。不仅是对之前所做工作的总结，也丰富一下自己的博客目录。"></a>毕业近两个月了，现在才想起来把毕业设计做的东西以博客的形式发出来，记得之前@爱可可—爱生活 老师分享加州大学圣地亚哥分校的Fhilip J.Guo教授对要求，“每篇发表的科研论文，最好都能配有一篇摘要博客文章，我试图对博士后发表的所有文章要求做到这一点（有时一篇博客里会包含几篇文章），我鼓励学生们也这样做，会有10-100x的人会阅读博客”。虽然这篇本科毕业论文不涉及发表，我也试图这样做。不仅是对之前所做工作的总结，也丰富一下自己的博客目录。</h5><ul>
+<li><p>由于自己在之前的本科学习过程中，接触过自然语言处理的相关（比如：《人民的名义》剧本文本分析及人物画像），所以在选题过程中义无反顾的选择了这个题目，还“作死”的要求指导老师能不能加上深度学习（毕竟全民ai潮，想着这样效果应该会更好）。随即课题的题目就成了——基于主题模型与深度学习的微博文本分类及地理可视化。</p>
+</li>
+<li><p>闲话不说，先大体介绍一下主要做了什么吧。主要以较为频发的路面塌陷事件作为背景，结合微博文本数据，使用主题模型BTM作为无监督的概率统计模型在文本语义挖掘上进行训练。再对主题聚类的进行文本的语料库构建。这里对对训练集与测试集采用了Facebook提出的FastText模型。同时也利用GIS技术对事件进行了相关空间分析，以达到热点事件挖掘的目的。感兴趣的可以下载哦，GitHub地址：<a href="https://github.com/HuimbleClown/undergraduate_essay/tree/master" target="_blank" rel="noopener">undergraduate_essay</a>。欢迎批评指正。</p>
+</li>
+</ul>
+<h1 id="数据获取"><a href="#数据获取" class="headerlink" title="数据获取"></a>数据获取</h1><ul>
+<li><p>首先选择了八爪鱼等多类网络采集工具，多次抓取会出现身份验证的问题。好像收费的就可以，不想花钱就放弃了（还是穷！）；然后我又去咨询了一下认识的在新浪工作的老师，说这数据好不好搞老师他说他买给我，我当然也放弃了（还是穷！）；最后就在网上各种搜罗，下载到了无数套爬虫程序，都用不了（这不是因为穷，是因为自己wuneng!）。</p>
+</li>
+<li><p>算了，自己搞呗。最终采用网络爬虫的方法，利用selenium测试工具，模拟微博登录；设置了自动身份验证的判断。抓取了在微博页面可以直观看到的文本数据，同时也获取到了每条文本所对应的时间、设备等各类信息(如下图)。</p>
+</li>
+<li><p><img src="1.jpg" alt="figure1"></p>
+</li>
+</ul>
+<h1 id="信息提取"><a href="#信息提取" class="headerlink" title="信息提取"></a>信息提取</h1><ul>
+<li><p>因为后期要进行地理可视化，所以地址信息必不可少。这里强烈推荐采中科院计算机所的NLPIR系统。采用它对文本中的地名实体进行抽取,得到事件发生的地址（相关预处理在这里不赘述了，比如去无意义数据、中文分词等）。</p>
+</li>
+<li><p><img src="2.jpg" alt="figure2"></p>
+</li>
+<li><p>另外还需要将文本地址转为坐标，这里也不赘述，<a href="http://dh629.top/2018/05/18/excel/" target="_blank" rel="noopener">Excel地图插件-ExcelMap</a>这篇博文里有详细介绍。</p>
+</li>
+</ul>
+<h1 id="分类语料库建立"><a href="#分类语料库建立" class="headerlink" title="分类语料库建立"></a>分类语料库建立</h1><ul>
+<li><p>主题模型是自然语言处理领域的重要工具之一，能够有效的发现语料的潜在语义信息。主题模型能够将高维度的文档中的词映射到低维度的隐含主题中（隐含主题是一系列词的多项分布），最终使得每个文档都可以通过主题表示。</p>
+</li>
+<li><p>首先比较了LDA模型与BTM模型在处理文本分类问题上的差异。微博文本数据属于短文本，在多个数据集上结果表明BTM在这方面更有优势。所以就应用BTM模型对数据进行文本主题建模。对文档—主题相似度进行聚类从而完成分类，从而构建语料库。（具体原理这里不展开说了，感兴趣可以去查看论文）</p>
+</li>
+<li><p><img src="3.jpg" alt="figure3"></p>
+</li>
+<li><p>进行聚类分析的算法有很多，其中K-means聚类算法在众多聚类算法里属于比较简单的，属于基于一种基于距离的无监督聚类算法，实现起来也比较容易，效果也能够满足要求。但它的缺点是需要指定聚类个数。这里采用了斯坦福大学的Robert等教授提出了Gap Statistic方法。文中定义Gap值为：</p>
+<p>  Gap_n (k)=E_n^* (log⁡(W_k ) )-logW_k</p>
+</li>
+<li><p><img src="4.jpg" alt="figure4"></p>
+</li>
+<li><p>为了便于表达，将聚类范围缩小到1—10类。由Gap指标以及图所示，当类别数为9时，GAP值达到最高峰。所以9可以作为最佳聚类数。这样对原始文本做标签处理，就完成了语料库的建立。</p>
+</li>
+</ul>
+<h1 id="FastText模型"><a href="#FastText模型" class="headerlink" title="FastText模型"></a>FastText模型</h1><ul>
+<li><p>FastText是一个可伸缩解决方案的资料库，其目的是帮助创建文本表征和分类，并且可以为294种语言提供训练模型。深度学习FastText模型主要应用于构建词向量与文本分类，在许多文本分类问题上都有非常不错的表现，不仅具有良好的分类效果，而且具有优秀的分类效率，所以适用于大批量的数据样本。在各个方面都表现出了很强的能力（如：标签的预测、情感分析等），尤其是对于短文本分类具有很好的性能。针对FastText算法的具体内容就不展开说了，具体可见<a href="http://dh629.top/2018/05/18/page/" target="_blank" rel="noopener">基于深度学习的对文本分类的FastText模型</a>这篇博文。</p>
+</li>
+<li><p><img src="5.jpg" alt="figure5"></p>
+</li>
+<li><p>在本次课题中，使用以上步骤对原始数据（共5586条）进行人工标记后，将这些数据划分为九子类，选取其中50%作为模型训练集，50%作为模型测试集。文本文件的每一行都包含一个标签列表，其后是相应的文档。所有标签都以<strong>label</strong>前缀开始，这就是FastText如何识别什么是标签或什么是一个词。然后对模型进行训练，以预测文档中给定单词的标签。</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">类别	P	R	F</span><br><span class="line">CLASS_ZERO	0.868421	0.970588	0.916667</span><br><span class="line">CLASS_ONE	0.684132	0.686186	0.685157</span><br><span class="line">CLASS_TWO	1.000000	1.000000	1.000000</span><br><span class="line">CLASS_THREE	1.000000	0.956522	0.977778</span><br><span class="line">CLASS_FOUR	0.875000	0.700000	0.777778</span><br><span class="line">CLASS_FIVE	0.857143	1.000000	0.923077</span><br><span class="line">CLASS_SIX	0.750487	0.738964	0.744681</span><br><span class="line">CLASS_SEVEN	0.882353	0.937500	0.909091</span><br><span class="line">CLASS_EIGHT	0.749285	0.748571	0.748928</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>由上表可知，测试集的平均准确度达到了74%，其中class_two、class_three具有百分之百的准确率，对于实验数据（数据量较少、质量相对较差的短文本数据）来说已经相当可观，由此可见针对短文本确实具有很高的效率。</li>
+</ul>
+<h1 id="可视化分析"><a href="#可视化分析" class="headerlink" title="可视化分析"></a>可视化分析</h1><ul>
+<li><p><img src="6.jpg" alt="figure6"></p>
+</li>
+<li><p>上图即为各文本数据所对应各类别事件的空间分布状况。同样第一类、第六类、第八类占大多数；第四类、第七类也相对较多。</p>
+</li>
+<li><p><img src="7.jpg" alt="figure7"></p>
+</li>
+<li><p>基于分类结果分别利用R语言调用wordcloud2包对各类别文本数据进行词云展示。由分类词云图可见，第0类是大多与小区建设塌陷有关的文本；第一类是地铁施工所造成的有关塌方事故的文本；第二类是北京西二旗路所对应的事件文本；第三类是劳斯莱斯轿车深陷大坑的事件；第四类是与货车有关的路面塌陷的事件文本；第五类是塌陷事件所对应的民警预警文本；第六类是为塌陷事件进行路面抢修的事件；第七类是电动车掉入大坑的事件文本；第八类是由于暴雨、积水等所造成的路面塌陷的事件文本。 </p>
+</li>
+</ul>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><ul>
+<li><p>本文就是从无监督分类-BTM主题模型入手，通过主题聚类为后续利用FastText模型进行分类提供基础数据。在多个实验数据上可以看出来，该分类思路能够取得目前最好的分类效果。同时，在任何短文本分类任务上都适用。</p>
+</li>
+<li><p>虽然上述研究思路与方法对于微博文本数据都取得了相当可观的效果，但其实微博粗糙的数据对其效果也产生了一定的影响，后续可以尝试下更先进的TextCNN,看看效果如何。</p>
+</li>
+</ul>
+<h5 id="就写到这儿，其实在完成了这个工作之后，借用这个方法之后也做了很有意思的事情待我下次再po出来，Good-Night。"><a href="#就写到这儿，其实在完成了这个工作之后，借用这个方法之后也做了很有意思的事情待我下次再po出来，Good-Night。" class="headerlink" title="就写到这儿，其实在完成了这个工作之后，借用这个方法之后也做了很有意思的事情待我下次再po出来，Good Night。"></a>就写到这儿，其实在完成了这个工作之后，借用这个方法之后也做了很有意思的事情待我下次再po出来，Good Night。</h5>
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://yoursite.com/2018/09/20/text-classification/" data-id="ck8yazvi10009pd3meve383t5" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2018/11/20/theme/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            基于BTM模型的《地理学报》论文摘要主题分析
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/06/07/P51/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">【P5自学笔记】之入门篇（1）</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Hexo</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">Links</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+
+</body>
+</html>

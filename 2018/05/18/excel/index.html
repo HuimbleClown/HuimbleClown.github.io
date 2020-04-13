@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    Excel地图插件-ExcelMap |
+    
+    Hexo</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<script src="/js/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head>
+
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-excel" class="article article-type-post" itemscope itemprop="blogPost" data-scroll-reveal>
+
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+  
+    <h1 class="article-title" itemprop="name">
+      Excel地图插件-ExcelMap
+    </h1>
+  
+  
+
+
+
+
+            </header>
+            
+
+                
+                    <div class="article-meta">
+                        <a href="/2018/05/18/excel/" class="article-date">
+  <time datetime="2018-05-18T12:48:25.000Z" itemprop="datePublished">2018-05-18</time>
+</a>
+                            
+                    </div>
+                    
+
+                        
+                            
+    <div class="tocbot"></div>
+
+
+
+
+
+                                
+
+                                    <div class="article-entry" itemprop="articleBody">
+                                        
+
+
+                                            
+
+                                                
+                                                                    <h1 id="写在开头"><a href="#写在开头" class="headerlink" title="写在开头"></a>写在开头</h1><p>之前在做课题的时候，遇到批量处理文字地址转经纬度的问题。使用了一个Excel的插件——ExcelMap，发了个票圈反响很激烈，所以在这里给大家分享一下。</p>
+<p>这是一款基于 Excel 表格进行地理数据挖掘、坐标转换、地图绘制、地图图表等操作的工具类应用软件。具有易用、高效、稳定的特点，能够满足地理数据应用及处理的基本需求， 也可提供个性化定制开发服务。</p>
+<h2 id="下载地址-amp-安装"><a href="#下载地址-amp-安装" class="headerlink" title="下载地址&amp;安装"></a>下载地址&amp;安装</h2><h5 id="安装包下载地址"><a href="#安装包下载地址" class="headerlink" title="安装包下载地址"></a>安装包下载地址</h5><p>链接：<a href="https://share.weiyun.com/54V9d3S" target="_blank" rel="noopener">https://share.weiyun.com/54V9d3S</a> 密码：z8i8pk</p>
+<h5 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h5><p>1、第一步</p>
+<p>使用 Office Excel 32 位的用户，直接双击 ExcelMaps.xll 运行插件。</p>
+<p>使用 Office Excel 64 位的用户，直接双击 ExcelMaps64.xll 运行插件。</p>
+<p>启动 Excel 后，会自动加载插件菜单，加载过程如遇到“安全提示”如下图，请允许“启 用此加载项”。如选择“禁用”则不能运行插件。Excel 退出后，插件将自动卸载。<br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/XJt5v25y9n13CTEzEH4E6wXUzL31TgSBOvbCtnj1dFs!/b/dEQBAAAAAAAA&bo=nAFJAQAAAAADB*c!&rf=viewer_4" alt="Alt text"><br>2、第二步</p>
+<p>为了方便，可手动设置自动加载插件。启动 EXCEL 后，进入“文件/选项”界面，如下<br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/.zfENrNl69RIzd80aCb6fuucPQxVforyfymB4BC*Vi4!/b/dDMBAAAAAAAA&bo=lQMwAgAAAAADJ6Y!&rf=viewer_4" alt="Alt text"><br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/eXntabPDJiFBveZq1vxbL*EGKYmFuJnF*GPMFaUWeWo!/b/dDMBAAAAAAAA&bo=ugFPAQAAAAADF8c!&rf=viewer_4" alt="Alt text"><br>选择“浏览按钮”，选择“ExcelMaps.xll”(32 位)或“ExcelMaps64.xll”(64 位)文 件。<br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/oujOxCqueEmVAf*2ykupcnGW8tz.iVYL7jRLXCI9H.w!/b/dDABAAAAAAAA&bo=qAKAAQAAAAADJyk!&rf=viewer_4" alt="Alt text"><br>单击“确定”，菜单中会加载“地图 X”TAB 菜单栏。<br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/qkZQeZCHH.8Gg09wxXv8r7RawZtw*4IvAHBbFoIqHRY!/b/dJEAAAAAAAAA&bo=kwPOAAAAAAADF2w!&rf=viewer_4" alt="Alt text"></p>
+<p>3、这样就完成插件安装。享受它带来的乐趣吧！</p>
+<h2 id="地址转坐标"><a href="#地址转坐标" class="headerlink" title="地址转坐标"></a>地址转坐标</h2><p>插件可以实现很多功能，因为我就使用了其中地址转坐标，所以就在这儿介绍下这个。更多的功能还要大家去挖掘噢～</p>
+<h5 id="数据准备"><a href="#数据准备" class="headerlink" title="数据准备"></a>数据准备</h5><p>因为是文字地址转坐标，我们首先要准备含有地址的文件。比如我所使用的地址是如此格式（需要使用PHONETIC函数将它们合并到一个单元格里）<br><img src="http://a3.qpic.cn/psb?/V12UrKG520d7wl/81*6gRN2i4ZDVze9IVaBGVwpyRnvKn35PVZCRL1JrSY!/m/dDIBAAAAAAAAnull&bo=zAE0AQAAAAADB9o!&rf=photolist&t=5" alt="Alt text"></p>
+<ul>
+<li>小tip:因为在进行数据转换之前，插件会进行表头格式化。所以建议可以将合并好的地址从第五行开始放在第二列。</li>
+</ul>
+<h5 id="功能设置"><a href="#功能设置" class="headerlink" title="功能设置"></a>功能设置</h5><p>在菜单栏处，可以设置爬虫个数以及休息频率。另在处理过程中可以把地图点开。<br><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/m3j.6LN4SDdSIJUrXJAeXqpo3iNq1tuaGIHW4T2qn2o!/b/dDABAAAAAAAA&bo=XQJvAQAAAAADBxM!&rf=viewer_4" alt="Alt text"></p>
+<p>【爬虫个数】:设置同时执行的爬虫数，可设置 1-5 个</p>
+<p>【爬虫休息】:设置执行一定行数后暂停执行一定时间，作用是解析数据行较多，需长 时间频繁执行时，有时地图上会出现滑块框要求人工验证，设置此功能可绕过该策略</p>
+<h5 id="开始爬虫"><a href="#开始爬虫" class="headerlink" title="开始爬虫"></a>开始爬虫</h5><p>开始菜单—数据爬虫-坐标与地址-地址转坐标</p>
+<p><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/kGDQXpjTri1VMV9f2uGG7NCQ5eNA8udZbEYFPG7jIV8!/b/dDIBAAAAAAAA&bo=pwPCAQAAAAADN3U!&rf=viewer_4" alt="Alt text"></p>
+<ul>
+<li>小tip:若未注册，在转换过程中会有数量限制。注册个账号就OK，就可以看到刷刷的跑了。</li>
+</ul>
+<p><img src="http://m.qpic.cn/psb?/V12UrKG520d7wl/ljed2LGuFg7Bghypd9lkYNk.VJ2y1gjPPp7eci9Hggg!/b/dEEBAAAAAAAA&bo=FwPDAAAAAAADF.U!&rf=viewer_4" alt="Alt text"></p>
+<h2 id="其他功能"><a href="#其他功能" class="headerlink" title="其他功能"></a>其他功能</h2><p>该插件还有其他很多功能，比如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">坐标转换</span><br><span class="line">拖拽选址</span><br><span class="line">驾车\步行\骑行\公交路线查询</span><br><span class="line">行政区查询</span><br><span class="line">兴趣点(POI)搜索</span><br><span class="line">地图图表</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>除了这个插件以外，还有geocodeing等可以完成这个工作，当然也可以用python。都是很好的选择，在这里我就给大家提供更多的选择。祝好噢～</p>
+
+                                                                        
+                                    </div>
+                                    <footer class="article-footer">
+                                        <a data-url="http://yoursite.com/2018/05/18/excel/" data-id="ck8yazvhl0004pd3mcgsyh7uo" class="article-share-link">
+                                            分享
+                                        </a>
+                                        
+                                    </footer>
+
+    </div>
+
+    
+        
+  <nav class="article-nav">
+    
+      <a href="/2018/06/07/P51/" class="article-nav-link">
+        <strong class="article-nav-caption">前一篇</strong>
+        <div class="article-nav-title">
+          
+            【P5自学笔记】之入门篇（1）
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2018/05/18/page/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">基于深度学习的对文本分类的FastText模型</div>
+      </a>
+    
+  </nav>
+
+
+            
+
+                
+                    
+                        
+  <div class="gitalk" id="gitalk-container"></div>
+  
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+  
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+  
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+  <script type="text/javascript">
+    var gitalk = new Gitalk({
+      clientID: '',
+      clientSecret: '',
+      repo: '',
+      owner: '',
+      admin: [''],
+      // id: location.pathname,      // Ensure uniqueness and length less than 50
+      id: md5(location.pathname),
+      distractionFreeMode: false,  // Facebook-like distraction free mode
+      pagerDirection: 'last'
+    })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+                            
+
+</article>
+</section>
+  <footer class="footer">
+  <div class="outer">
+    <div class="float-right">
+      <ul class="list-inline">
+  
+    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
+  
+    <li><i class="fe fe-bookmark"></i> <span id="busuanzi_value_page_pv"></span></li>
+  
+</ul>
+    </div>
+    <ul class="list-inline">
+      <li>&copy; 2020 Hexo</li>
+      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
+    </ul>
+  </div>
+</footer>
+
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/"><img src="/images/hexo.svg" alt="Hexo"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/">Home</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/archives">Archives</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/gallery">Gallery</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/about">About</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/links">Links</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="搜索">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      <div class="totop" id="totop">
+  <i class="fe fe-rocket"></i>
+</div>
+    </li>
+    <li class="nav-item">
+      
+        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+          <i class="fe fe-feed"></i>
+        </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+
+<script src="/js/jquery-2.0.3.min.js"></script>
+
+
+<script src="/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/lazyload.min.js"></script>
+
+
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+  
+<script src="/js/tocbot.min.js"></script>
+
+  <script>
+    // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+    tocbot.init({
+      tocSelector: '.tocbot',
+      contentSelector: '.article-entry',
+      headingSelector: 'h1, h2, h3, h4, h5, h6',
+      hasInnerContainers: true,
+      scrollSmooth: true,
+      positionFixedSelector: '.tocbot',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  </script>
+
+
+
+<script src="/js/ocean.js"></script>
+
+
+
+</body>
+</html>

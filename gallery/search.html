@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+header{width:1440px;height:200px;margin:0 auto;}
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <title>Pixel Admin - Responsive Admin Dashboard Template built with Twitter Bootstrap</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- Preloader 
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>-->
+    
+        <!-- Navigation 
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
+                <div class="top-left-part"><a class="logo" href="index.html"><b><img src="../plugins/images/pixeladmin-logo.png" alt="home" /></b><span class="hidden-xs"><img src="../plugins/images/pixeladmin-text.png" alt="home" /></span></a></div>
+                <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
+                    <li>
+                        <form role="search" class="app-search hidden-xs">
+                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    <li> </li>
+                </ul>
+            </div>
+             /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        
+        <!-- Left navbar-header 
+        <div class="navbar-default sidebar" role="navigation">
+            <div class="sidebar-nav navbar-collapse slimscrollsidebar">
+                <ul class="nav" id="side-menu">
+                    <li style="padding: 10px 0 0;">
+                        <a href="index.html" class="waves-effect"><em class="fa fa-clock-o fa-fw" aria-hidden="true"></em><span class="hide-menu">出、入院情况</span></a>
+                    </li>
+                    <li>
+                        <a href="profile.html" class="waves-effect"><i class="fa fa-user fa-fw" aria-hidden="true"></i><span class="hide-menu">医生信息</span></a>
+                    </li>
+                    <li>
+                        <a href="basic-table.html" class="waves-effect"><i class="fa fa-table fa-fw" aria-hidden="true"></i><span class="hide-menu">患者信息</span></a>
+                    </li>
+                    
+                    <li> </li>
+                </ul>
+                <div class="center p-20">
+                    <span class="hide-menu"><a href="#" target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">Upgrade to Pro</a></span>
+                </div>
+            </div>
+        </div>-->
+        <!-- Left navbar-header end -->
+        <!-- Page Content -->
+        <div>
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">出、入院情况</h4> </div>
+                    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- row -->
+                    <div class="row">
+                        <!--col -->
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <div class="col-in row">
+                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                                  <h5 class="text-muted vb">今日出院人数</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" id="out_today"></div>
+                               
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <div class="col-in row">
+                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                                  <h5 class="text-muted vb">今日入院人数</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" id="in_today"></div>
+                               
+                            </div>
+                        </div>
+                        </div>         
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                      <div class="white-box">
+                        <div class="col-in row">
+                          <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                            <h5 class="text-muted vb">重症患者</h5>
+                          </div>
+                          <div class="col-md-6 col-sm-6 col-xs-6" id="serious"></div>
+
+                          </div>
+                        
+                        </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <div class="col-in row">
+                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                                  <h5 class="text-muted vb">累计入院人数</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" id="allin"></div>
+                               
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <div class="col-in row">
+                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                                  <h5 class="text-muted vb">累计出院人数</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" id="allout"></div>
+                               
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <div class="white-box">
+                            <div class="col-in row">
+                                <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
+                                  <h5 class="text-muted vb">现存住院人数</h5>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-6" id="allnow"></div>
+                               
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+            </div>
+
+            
+
+            <div class="container-fluid">
+                <div class="row bg-title">
+                    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                        <h4 class="page-title">患者信息</h4> </div>
+<!-- /.col-lg-12 -->
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="white-box">
+                          
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>床位号</th>
+                                            <th>姓名</th>
+                                            <th>性别</th>
+                                            <th>年龄</th>
+                                            <th>症状</th>
+											<th>入院时间</th>
+                                            <th>地区</th>
+                                            <th>状态</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="patienttable">
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </div>
+
+            <div class="container-fluid">
+                <div class="row bg-title">
+                <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                    <h4 class="page-title">医生信息</h4> </div>
+                </div>
+                <!-- /.row -->
+                <div class="row">
+
+                <div class="col-sm-12">
+                    <div class="white-box">
+                
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>序号</th>
+                                        <th>姓名</th>
+                                        <th>性别</th>
+                                        <th>年龄</th>
+                                        <th>地区</th>
+                                        <th>入院时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="doctortable">
+                             
+                                </tbody>
+                            </table>
+                        </div>
+                  </div>
+                <div class="row"> 
+                </div>
+                <!-- /.row -->
+                </div>
+            </div>
+        </div>
+           
+        <!--</div> -->
+        <!-- /#page-wrapper -->
+    
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Counter js -->
+    <script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+    <!--Morris JavaScript -->
+    <script src="plugins/bower_components/raphael/raphael-min.js"></script>
+    <script src="plugins/bower_components/morrisjs/morris.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <script src="js/dashboard1.js"></script>
+    <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script type="text/javascript">  
+    
+                function GetDay(day) {
+                    var time = new Date();
+                    time.setDate(time.getDate() + day);//获取Day天后的日期 
+                    var y = time.getFullYear();
+                    var m = time.getMonth() + 1;//获取当前月份的日期 
+                    var d = time.getDate();
+                    return y + "/" + m + "/" + d;
+                }
+
+            function indexDemo(result){
+              //回调函数名称(indexDemo)，需要与 src 中一致，而且要与文件地址中名一致。jsonp格式 名称({})
+            //不然无法获取到对应的文件
+               console.log(result)     //打印 indexDemo.json 中的数据
+               var date = new Date();
+               var outall=0;
+               var seriousall=0;
+               var todayin=0;
+               var todayout=0;
+               var d1=new Array(0,0,0,0,0,0,0);
+               var d2=new Array(0,0,0,0,0,0,0);
+               console.log(d1);
+               for(var i=0;i<result.patient.length;i++){
+                    strdate=result.patient[i].time.replace(/-/g, '/');
+                    if(result.patient[i].state0=="出院")
+                    {
+                        outall++;
+                    }
+                    if(result.patient[i].state1=="重症")
+                    {
+                        seriousall++;
+                    }
+                    if(result.patient[i].state0=="出院"&&(strdate==date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate()))
+                    {
+                        todayout++;
+                    }
+                    if((result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")&&((strdate==date.getFullYear()+"/"+(date.getMonth()+1)+"/"+date.getDate())||(strdate==date.getFullYear()+"/0"+(date.getMonth()+1)+"/"+date.getDate())))
+                    {
+                        todayin++;
+                    }
+                    if(strdate==GetDay(-6))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[0]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[0]++;
+                        }
+                    }
+                    if(strdate==GetDay(-5))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[1]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[1]++;
+                        }
+                    }
+                    if(strdate==GetDay(-4))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[2]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[2]++;
+                        }
+                    }
+                    if(strdate==GetDay(-3))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[3]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[3]++;
+                        }
+                    }
+                    if(strdate==GetDay(-2))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[4]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[4]++;
+                        }
+                    }
+                    if(strdate==GetDay(-1))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[5]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[5]++;
+                        }
+                    }
+                    if(strdate==GetDay(0))
+                    {
+                        if(result.patient[i].state0=="出院")
+                        {
+                            d1[6]++;
+                        }
+                        if(result.patient[i].state0=="住院中"||result.patient[i].state0=="入院")
+                        {
+                            d2[6]++;
+                        }
+                    }
+                }
+                console.log(d1,d2);
+                var allin = document.getElementById("allin");
+                allin.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+result.patient.length+"</h3>";
+                var out = document.getElementById("allout");
+                out.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+outall+"</h3>";
+                var serious = document.getElementById("serious");
+                serious.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+seriousall+"</h3>";
+                var todayinin = document.getElementById("in_today");
+                todayinin.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+todayin+"</h3>";
+                var todayoutout = document.getElementById("out_today");
+                todayoutout.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+todayout+"</h3>";
+                var allnow = document.getElementById("allnow");
+                allnow.innerHTML = "<h3 class='counter text-right m-t-15 text-megna'>"+(result.patient.length-outall)+"</h3>";
+
+                
+
+                
+
+            for(var i=0;i<result.patient.length;i++){
+                var patient = result.patient;
+                var tb = document.getElementById("patienttable");
+                var tr = document.createElement("tr");
+                var newname = document.createElement("td");
+                var newage = document.createElement("td");
+                var newgender = document.createElement("td");
+                var newarea = document.createElement("td");
+                var newtime = document.createElement("td");
+                var newstate0 = document.createElement("td");
+                var newstate1 = document.createElement("td");
+                var newid = document.createElement("td");
+                newid.innerText=i+1;
+                newname.innerText = patient[i].name;
+                newgender.innerText = patient[i].gender;
+                newarea.innerText = patient[i].area;
+                newtime.innerText = patient[i].time;
+                newstate0.innerText = patient[i].state0;
+                newstate1.innerText = patient[i].state1;
+                newage.innerText = patient[i].age;
+                tr.appendChild(newid);
+                tr.appendChild(newname);
+                tr.appendChild(newgender);
+                tr.appendChild(newage);
+                tr.appendChild(newstate1);
+                tr.appendChild(newtime);
+                tr.appendChild(newarea);
+                tr.appendChild(newstate0);
+                tb.appendChild(tr);
+            }
+            for(var i=0;i<result.doctor.length;i++){
+                var doctor = result.doctor;
+                var tb = document.getElementById("doctortable");
+                var tr = document.createElement("tr");
+                var newname = document.createElement("td");
+                var newage = document.createElement("td");
+                var newgender = document.createElement("td");
+                var newarea = document.createElement("td");
+                var newtime = document.createElement("td");
+                var newid = document.createElement("td");
+                newid.innerText=i+1;
+                newname.innerText = doctor[i].name;
+                newgender.innerText = doctor[i].gender;
+                newarea.innerText = doctor[i].area;
+                newtime.innerText = doctor[i].time;
+                newage.innerText = doctor[i].age;
+              
+                tr.appendChild(newid);
+                tr.appendChild(newname);
+                tr.appendChild(newgender);
+                tr.appendChild(newage);
+                tr.appendChild(newarea);
+                tr.appendChild(newtime);
+                tb.appendChild(tr);
+            }
+
+
+            }
+    </script>
+    <script type="text/javascript" src="data.json?callback=indexDemo">
+    </script>  
+    
+     <script type="text/javascript"> 
+        
+         
+     </script> 
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+indexDemo({
+    "patient":[
+        {"name":"患者1","gender":"女","age":19,"state0":"入院","state1":"重症","time":"2020-4-25","area":"北京"},
+        {"name":"患者2","gender":"女","age":57,"state0":"住院中","state1":"轻症","time":"2020-4-24","area":"北京"},
+		    {"name":"患者3","gender":"男","age":40,"state0":"住院中","state1":"重症","time":"2020-4-23","area":"武汉"},
+        {"name":"患者4","gender":"男","age":28,"state0":"入院","state1":"重症","time":"2020-4-26","area":"武汉"},
+        {"name":"患者5","gender":"女","age":30,"state0":"出院","state1":"轻症","time":"2020-4-27","area":"武汉"},
+        {"name":"患者6","gender":"女","age":64,"state0":"出院","state1":"轻症","time":"2020-4-27","area":"荆州"},
+        {"name":"患者7","gender":"女","age":32,"state0":"入院","state1":"轻症","time":"2020-4-27","area":"荆州"},
+        {"name":"患者8","gender":"男","age":33,"state0":"住院中","state1":"轻症","time":"2020-4-29","area":"荆州"},
+        {"name":"患者9","gender":"女","age":63,"state0":"出院","state1":"轻症","time":"2020-4-29","area":"天门山"},
+        {"name":"患者10","gender":"女","age":47,"state0":"住院中","state1":"重症","time":"2020-4-29","area":"天门山"},
+    ],
+    "doctor":[
+        {"name":"医生1","gender":"男","age":36,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生2","gender":"女","age":39,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生3","gender":"女","age":43,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生4","gender":"男","age":30,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生5","gender":"男","age":32,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生6","gender":"女","age":44,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生7","gender":"女","age":40,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生8","gender":"男","age":29,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生9","gender":"女","age":37,"area":"江苏","time":"2020-2-02"},
+        {"name":"医生10","gender":"女","age":35,"area":"江苏","time":"2020-2-02"},
+    ]
+})

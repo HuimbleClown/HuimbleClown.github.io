@@ -1,189 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<style>
+header{width:100%;height:100%;margin:0 auto;}
+</style>
 <head>
-  <meta charset="utf-8">
-  
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>
-    gallery |
-    
-    D_double_h&#39;s Blog</title>
-  
-    <link rel="shortcut icon" href="/favicon.ico">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
+    <title>方舱医院博物馆可视化平台</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Menu CSS -->
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <!-- toast CSS -->
+    <link href="plugins/bower_components/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <!-- morris CSS -->
+    <link href="plugins/bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- animation CSS -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="css/colors/blue-dark.css" id="theme" rel="stylesheet">
+	
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
-
-  
-  
-<script src="/js/pace.min.js"></script>
-
-<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="D_double_h's Blog" type="application/atom+xml">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
-<main class="content">
-  <section class="outer">
-  <article id="page-" class="article article-type-page" itemscope itemprop="blogPost" data-scroll-reveal>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="row">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top m-b-0">
+            <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="fa fa-bars"></i></a>
+				   <font weight="7000" face="STLiti" size="+4" color="black"><img src="img/hos.jpg" alt="user-img" width="45" class="img-circle"> &nbsp;方舱医院博物馆可视化平台</font></a><span class="hidden-xs"></span></a>
+				</div>
+				</div> 
+                <ul class="nav navbar-top-links navbar-left m-l-20 hidden-xs">
+                    <li>
+                        <form role="search" class="app-search hidden-xs">
+                            <a href=""></a>
+                        </form>
+                    </li>
+                </ul>
+                <ul class="nav navbar-top-links navbar-right pull-right">
+                    
+                </ul>
+            </div>
+            <!-- /.navbar-header -->
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+        <!-- Left navbar-header -->
+        <div class="navbar-default sidebar" role="navigation" style="wodth:50%">
+            <div class="sidebar-nav navbar-collapse slimscrollsidebar" position="fixed">
+			<div class="center p-20">
+				  
+				 </br><font  color="white" size="2">  </br></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;火神山医院位于武汉市蔡甸区知音湖大道，是参照2003年抗击非典期间“北京小汤山医院”模式，在武汉职工疗养院，建设一座专门医院，集中收治新型冠状病毒肺炎患者。医院总建筑面积3.39万平方米，编设床位1000张，开设重症监护病区、重症病区、普通病区，设置感染控制、检验、特诊、放射诊断等辅助科室，不设门诊。</font>
+                </div>
+			
+                <div class="center p-20">
+                    <span class="hide-menu"><a href="search.html"  target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">信息查询</a></span>
+                </div>
+			
+			 <div class="center p-20">
+                    <span class="hide-menu"><a href="3dview.html"  target="_blank" class="btn btn-danger btn-block btn-rounded waves-effect waves-light">三维漫游</a></span>
+              </div>
+			 <div class="center p-20">
+				  <font  color="white" size="2"></br>
+               备注：</font></br><font  color="white" size="2">  </br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本平台主要以火神山医院为例展示方舱医院的设施。分别提供数据查询与三维漫游两种功能。其中数据查询功能中，可根据需求查看当日医院的出入院人数、累计出入院人数、重症患者和现存住院人数；查看具体患者的基本情况；以及可以查看医务工作者的基本情况与支援时间。其中三维漫游功能中，可从各视角查看方舱医院的三维模型，并可选择室内室外两条线路进行浏览。</font>
+                </div>
+            </div>
+        </div>
+        <!-- Left navbar-header end -->
+        <!-- Page Content -->
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row bg-title">
 
-    <div class="article-inner">
-        
-            <header class="article-header">
-                
-  
-    <h1 class="article-title" itemprop="name">
-      gallery
-    </h1>
-  
-  
-
-
-
-
-            </header>
-            
-
-                
-
-                        
-
-                                    <div class="article-entry" itemprop="articleBody">
-                                        
-
-
-                                            
-
-                                                
-                                                                    
-                                                                        
+					     </br>
+					<div id="page-inner">
+               <!-- /. ROW  -->
+          <div class="row"></div>
+					<div class="row"></div>
+					 <div class="panel panel-default" style=align-items:center  >
+					 <div id="carousel-example" class="carousel slide" data-ride="carousel" style="border: 1px solid #000; width:93% " align="center";>
+	              
+                                <div class="carousel-inner"  style="width: 80%;" > 
+									<div class="item active"  style="width:100%;height:55%" >
+                                        <img src="img/1.jpg"  width="80%" height="55%" alt="" />
                                     </div>
-                                    <footer class="article-footer">
-                                        <a data-url="http://yoursite.com/gallery/index.html" data-id="ck8ybkc3y0000sb3m8mtb3j61" class="article-share-link">
-                                            分享
-                                        </a>
-                                        
-                                    </footer>
-
-    </div>
-
-    
-        
-
-            
-
+									<div class="item" style="width:100%;height:55%" >
+                                      <img src="img/2.jpg"  width="80%" height="55%" alt="" />
+                                    </div>
+                                    <div class="item" style="width:100%;height:55%" >
+                                        <img src="img/3.jpg" width="80%" height="55%" alt="" />
+                                    </div>
+									<div class="item" style="width:100%;height:55%" >
+                                       <img src="img/4.jpg"  width="80%" height="55%" alt="" />
+                                    </div>
+									<div class="item" style="width:100%;height:55%" >
+                                      <img src="img/5.jpg"  width="80%" height="55%" alt="" />
+                                    </div>
+									
+                                </div>
+                                <!--INDICATORS-->
+                                <!--PREVIUS-NEXT BUTTONS-->
+                                <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                       </div>
+					
+					
+					
+					
+					
+					
+                </div>
+                <!-- row -->
                 
+                <!-- /.row -->
+                <!--row -->
+                <div class="row">
+                    <div class="col-md-12"  style="width: 93%;"> 
+					 <font color="black" size="3"></br>
+<em class="fa fa-hospital-o"></em>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;方舱医院是以医疗方舱为载体，医疗与医技保障功能综合集成的可快速部署的成套野外移动医疗平台。方舱医院一般由医疗功能单元、病房单元、技术保障单元等部分构成，是一种模块化卫生装备，具有紧急救治、外科处置、临床检验等多方面功能。由于它机动性好，展开部署快速，环境适应性强等诸多优点而能够适应突发的应急医学救援任务，因而受到了各个国家的高度重视 。在我国抗震救灾等公共卫生应急保障中发挥了巨大作用。</br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 方舱医院的发展始于20世纪60年代，美军为了适应越南战争的需要，率先将自给式可运输的野战医院投入战场使用，给野战卫生装备提供了新的应用手段，是野战医院方舱化道路的开端。“九五”以来，我国开始研制第一代方舱医院系统。第一代方舱医院以野外医疗所为运营模式，由医疗功能单元、病房单元、技术保障单元3部分构成。“十一五”后期，为加快推进我国装备现代化建设，对第二代方舱医院中的手术方舱和医技保障方舱进行了升级改造。</br></br>
 
-</article>
-</section>
-  <footer class="footer">
-  <div class="outer">
-    <div class="float-right">
-      <ul class="list-inline">
-  
-    <li><i class="fe fe-smile-alt"></i> <span id="busuanzi_value_site_uv"></span></li>
-  
-</ul>
+             </font>
+					</div>
+			
+			
+	 <div class="col-md-12" style="align-content: center;width:93%"  > 
+				<Iframe style="align-content: " src="map.html" width="100%" height="500px" scrolling="auto" frameborder="map"></iframe>
+
+					</div>	
+			
+			
+		 <div class="col-md-12" style="width: 93%;"> 
+					 <font color="black" size="3"></br>
+<em class="fa fa-ambulance"></em> &nbsp;&nbsp;&nbsp;在疫情的关键时期，为了集中收治新型冠状病毒感染的肺炎轻症患者，武汉全面着手将会展中心、体育场馆等改造为“方舱医院”，可以有效缓解武汉医疗资源紧张，解决轻症患者的收治难题。截至2月6日，武汉方舱医院增加至15所。（发表于2020.2.17总第935期《中国新闻周刊》）</br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;武汉“方舱医院”虽然有别于正式的医院，但各种功能也是齐全的，其中，医疗功能单元、病房单元、技术保障单元等一个不少，可以开展紧急救治、外科处置、临床检验等多项任务。据报道，有20支国家紧急医学救援队参与到首批三处“方舱医院”的组建工作中。国家紧急医学救援队伍展开后相当于一所二级甲等综合医院。同时，这三处“方舱医院”还配备了三辆移动P3试验室，可对病毒进行检测。武汉体育中心“方舱医院”实现了WIFI全覆盖，安装了多套洗漱设备，配备有热水器、空调。
+方舱医院包含洗消方舱、储物方舱、药品方舱、灭菌方舱、检验方舱、手术方舱、急救方舱、电站方舱等。有急救、手术、检验、X光等多个模块化系统及辅助设备。(2020.02.08发表于环球网)</br></br>
+				
+
+             </font>
+					</div>	
+			 </div>
+                <!--row -->
+            
+            <!-- /.container-fluid -->
+            <footer class="footer text-center">Copyright &copy;党辉、张瑾、张新苑、陈吉臻</footer>
+        </div>
+        <!-- /#page-wrapper -->
     </div>
-    <ul class="list-inline">
-      <li>&copy; 2020 D_double_h&#39;s Blog</li>
-      <li>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></li>
-      <li>Theme  <a href="https://github.com/zhwangart/hexo-theme-ocean" target="_blank" rel="noopener">Ocean</a></li>
-    </ul>
-  </div>
-</footer>
-
-</main>
-<aside class="sidebar">
-  <button class="navbar-toggle"></button>
-<nav class="navbar">
-  
-    <div class="logo">
-      <a href="/"><img src="/images/hexo.svg" alt="D_double_h&#39;s Blog"></a>
-    </div>
-  
-  <ul class="nav nav-main">
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/">Home</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/archives">Archives</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/gallery">Gallery</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/about">About</a>
-      </li>
-    
-      <li class="nav-item">
-        <a class="nav-item-link" href="/links">Links</a>
-      </li>
-    
-    <li class="nav-item">
-      <a class="nav-item-link nav-item-search" title="搜索">
-        <i class="fe fe-search"></i>
-        搜索
-      </a>
-    </li>
-  </ul>
-</nav>
-<nav class="navbar navbar-bottom">
-  <ul class="nav">
-    <li class="nav-item">
-      <div class="totop" id="totop">
-  <i class="fe fe-rocket"></i>
-</div>
-    </li>
-    <li class="nav-item">
-      
-        <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
-          <i class="fe fe-feed"></i>
-        </a>
-      
-    </li>
-  </ul>
-</nav>
-<div class="search-form-wrap">
-  <div class="local-search local-search-plugin">
-  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
-  <div id="local-search-result" class="local-search-result"></div>
-</div>
-</div>
-</aside>
-
-<script src="/js/jquery-2.0.3.min.js"></script>
-
-
-<script src="/js/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/lazyload.min.js"></script>
-
-
-<script src="/js/busuanzi-2.3.pure.min.js"></script>
-
-
-  
-<script src="/fancybox/jquery.fancybox.min.js"></script>
-
-
-
-
-
-
-<script src="/js/ocean.js"></script>
-
-
-
+    <!-- /#wrapper -->
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Menu Plugin JavaScript -->
+    <script src="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+    <!--slimscroll JavaScript -->
+    <script src="js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="js/waves.js"></script>
+    <!--Counter js -->
+    <script src="plugins/bower_components/waypoints/lib/jquery.waypoints.js"></script>
+    <script src="plugins/bower_components/counterup/jquery.counterup.min.js"></script>
+    <!--Morris JavaScript -->
+    <script src="plugins/bower_components/raphael/raphael-min.js"></script>
+    <script src="plugins/bower_components/morrisjs/morris.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/custom.min.js"></script>
+    <script src="js/dashboard1.js"></script>
+    <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
 </body>
+
 </html>

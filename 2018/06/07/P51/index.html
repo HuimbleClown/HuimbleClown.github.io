@@ -28,13 +28,8 @@
 <meta property="og:description" content="若干年前我关注一个公众号“算法艺术实验室AALab”,当时关注的原因大概就是因为它推送的东西都特别好看，大多都是一些计算机艺术视觉效果。（PS：这绝对不是广告植入）就慢慢跟着推送的project自己实战。为啥会分享这个工具，是因为之前在刷微博看到威斯康星大学麦迪逊分校的高松博士@高松-giser在展示一个可视化项目的时候用到了它，画了一张带有地理标签的Twitter数据时间分布图。   咳咳，到正">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/WechatIMG1.jpeg">
-<meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/2.gif">
-<meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/1.gif">
-<meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/5.gif">
-<meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/00AB498C-6484-42E9-B544-0B7C25ED2485.png">
-<meta property="og:image" content="http://p9xz1n0wp.bkt.clouddn.com/7B90165B-61DD-4D6C-9171-F2EB5726743E.png">
 <meta property="article:published_time" content="2018-06-07T13:02:33.000Z">
-<meta property="article:modified_time" content="2018-06-07T13:09:43.000Z">
+<meta property="article:modified_time" content="2022-01-02T12:57:53.730Z">
 <meta property="article:author" content="D_double_h">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://p9xz1n0wp.bkt.clouddn.com/WechatIMG1.jpeg">
@@ -180,10 +175,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2018-06-07 21:02:33 / 修改时间：21:09:43" itemprop="dateCreated datePublished" datetime="2018-06-07T21:02:33+08:00">2018-06-07</time>
+              <time title="创建时间：2018-06-07 21:02:33" itemprop="dateCreated datePublished" datetime="2018-06-07T21:02:33+08:00">2018-06-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-02 20:57:53" itemprop="dateModified" datetime="2022-01-02T20:57:53+08:00">2022-01-02</time>
+              </span>
 
           
 
@@ -201,27 +202,18 @@
 
 <p>咳咳，到正题了。这次要分享的是一种图形设计语言，当然还会有一些学习资源以及实例（我也是边自学边分享，说错了可要轻轻拍砖）。</p>
 <h1 id="Prcessing"><a href="#Prcessing" class="headerlink" title="Prcessing"></a>Prcessing</h1><p>标题就是这次的主角(为了表明自己是老司机可以简称P5)。Processing是一种具有革命前瞻性的新兴计算机语言，它的概念是在电子艺术的环境下介绍程序语言，并将电子艺术的概念介绍给程序设计师。（默默满足了想做技术宅的艺术家的虚荣心，反正就是酷炫！）它是 Java 语言的延伸，并支持许多现有的 Java 语言架构，不过在语法 (syntax) 上简易许多，并具有许多贴心及人性化的设计。Processing 可以在 Windows、MAC OS X、MAC OS 9 、Linux 等操作系统上使用。目前最新版本为Processing 3。以 Processing 完成的作品可在个人本机端作用，或以Java Applets 的模式外输至网络上发布。</p>
-<p>先来几个小例子吸引下大家：</p>
-<li><img src="http://p9xz1n0wp.bkt.clouddn.com/2.gif" alt="Alt text"></li>
-<li><img src="http://p9xz1n0wp.bkt.clouddn.com/1.gif" alt="Alt text"></li>
-
 <h2 id="Processing的下载地址"><a href="#Processing的下载地址" class="headerlink" title="Processing的下载地址"></a>Processing的下载地址</h2><p>（建议下载最新版）<a href="https://processing.org/" target="_blank" rel="noopener">https://processing.org/</a></p>
 <h2 id="学习网站"><a href="#学习网站" class="headerlink" title="学习网站"></a>学习网站</h2><p>1.这是一个processing的成果和code的共享网站，算是一个社区吧，有很多方案在里面。<br><a href="https://www.openprcessing.org/" target="_blank" rel="noopener">https://www.openprcessing.org/</a></p>
 <p>2.Daniel Shiffman 的英文教程，内容详细易懂。<br><a href="https://hello.processing.org/editor/" target="_blank" rel="noopener">https://hello.processing.org/editor/</a></p>
 <p>3.其实强烈推荐大家主要看官网和一些书籍，最有帮助。另外会java的童鞋会更容易上手哦～</p>
 <p>4.（ios小福利）苹果系统的小伙伴可以在应用商店里搜到processing的ios版，直接coding，直接run。有木有6的飞起～</p>
-<h2 id="小实例"><a href="#小实例" class="headerlink" title="小实例"></a>小实例</h2><p>这里可以展示下我仿做的小实例～</p>
-<li><img src="http://p9xz1n0wp.bkt.clouddn.com/5.gif" alt="Alt text"></li>
-主要过程是鼠标点击面板，依次出现三个词语“I AM D_Double_H”。
-
+<h2 id="小实例"><a href="#小实例" class="headerlink" title="小实例"></a>小实例</h2><p>主要过程是鼠标点击面板，依次出现三个词语“I AM D_Double_H”。</p>
 <h3 id="简单操作"><a href="#简单操作" class="headerlink" title="简单操作"></a>简单操作</h3><p>我这里说两个例子（这次主要介绍静态图），大家可以跟着玩玩～</p>
 <p>先介绍几个知识点：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">画布   size（x,y）</span><br><span class="line">点      point(x,y);</span><br><span class="line">直线 line(x1,y1,x2,y2);</span><br><span class="line">三角形     triangle(x1,y1,x2,y2,x3,y3);</span><br><span class="line">四边形 quad(x1,y1,x2,y2,x3,y3,x4,y4);</span><br><span class="line">矩形   rect(x,y,width,height);</span><br><span class="line">椭圆 ellipse(x,y,width,height);</span><br><span class="line">填充     fill(1,2,3)</span><br><span class="line">描边    stroke(1,2,3)</span><br><span class="line">描边厚度   strokeWright（x）</span><br></pre></td></tr></table></figure>
 <h4 id="图形绘制"><a href="#图形绘制" class="headerlink" title="图形绘制"></a>图形绘制</h4><p>先从简单的画点画线开始，下面这个图就是我们将要完成的工作。在一个圆的周围均匀分布多个点，并把它们都用线连起来。</p>
-<li><img src="http://p9xz1n0wp.bkt.clouddn.com/00AB498C-6484-42E9-B544-0B7C25ED2485.png" alt="Alt text"></li>
-1、算各点的x、y坐标。
-
-<p>假设圆心在坐标中心点的话。每个点的（x,y）和圆心连线与x轴正方向的夹角是angle，那么,x=cos(angle)<em>radius, y=sin(angle)</em>radius。而夹角angle取决于有多少个点。假设我们要画10个点,半径是100：</p>
+<p>1、算各点的x、y坐标。</p>
+<p>假设圆心在坐标中心点的话。每个点的（x,y）和圆心连线与x轴正方向的夹角是angle，那么,x=cos(angle)*radius, y=sin(angle)*radius。而夹角angle取决于有多少个点。假设我们要画10个点,半径是100：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int numPoints &#x3D; 12;</span><br><span class="line">float radius &#x3D; 100;</span><br><span class="line">float angle &#x3D; TWO_PI &#x2F; numPoints;</span><br><span class="line">for (int i &#x3D; 0; i &lt; numPoints; i++) &#123;</span><br><span class="line">     float x &#x3D; cos( angle * i ) * radius;</span><br><span class="line">     float y &#x3D; sin( angle * i ) * radius;</span><br><span class="line">     points&lt;i&gt; &#x3D; new PVector( x, y );</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在上面的循环里，我们从x轴，也就是角度0度开始，取到各个点的夹角angle*i。然后计算出(x,y)的坐标，存放在一个PVector的数组中。这步计算是放在setup()函数中的。</p>
 <p>一个Processing的程序通常有两个必要的函数：setup()和draw()。 setup()在程序启动的时候被运行一次，所以通常用来设置绘制中需要的变量。而draw()函数被不停的被运行来绘制图形，就好像电视屏幕不断地在刷新一样。</p>
@@ -232,10 +224,7 @@
 <h4 id="数据可视化图"><a href="#数据可视化图" class="headerlink" title="数据可视化图"></a>数据可视化图</h4><p>以高松博士@高松-giser的project为启发介绍一个做柱状图的。</p>
 <p>柱状图是由一系列的长方形组成的，所以柱状图的画法要抓住两个点：一个是坐标系大小（就是你的画布大小），画布的大小要保证最终各柱形能够很好的显示。；另一个是长方形的画法（前面知识点已经给出了）。当然也可以对画布的背景颜色、柱体的背景颜色进行改变，这里不详细介绍。<br>只需要加写循环，加数字就好了。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">void setup()</span><br><span class="line">&#123;</span><br><span class="line">     size(200,200);</span><br><span class="line">     int[] numbers &#x3D; &#123; 22,56,67,20,34,33,45,56,67,78,23&#125;;</span><br><span class="line">     for(int i&#x3D;0;i&lt;numbers.length;i++)&#123;</span><br><span class="line">         rect(i*10, 200, 10, -numbers[i]);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>code中的10代表每列的宽度。即可得到下图～</p>
-<li><img src="http://p9xz1n0wp.bkt.clouddn.com/7B90165B-61DD-4D6C-9171-F2EB5726743E.png" alt="Alt text"></li>
-看起来虽然丑，但是还不错。（其实是自己觉得丑想改，又因为累了不想改了）
-
+<p>code中的10代表每列的宽度。</p>
 <p>这个就分享到这里了，可以当成分享、也可以当成教程、也可以当成学习笔记。也就是提供一种可视化的方法给到大家～欧了</p>
 
     </div>

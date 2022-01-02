@@ -27,18 +27,10 @@
 <meta property="og:site_name" content="D_double_h&#39;s Blog">
 <meta property="og:description" content="毕业近两个月了，现在才想起来把毕业设计做的东西以博客的形式发出来，记得之前@爱可可—爱生活 老师分享加州大学圣地亚哥分校的Fhilip J.Guo教授对要求，“每篇发表的科研论文，最好都能配有一篇摘要博客文章，我试图对博士后发表的所有文章要求做到这一点（有时一篇博客里会包含几篇文章），我鼓励学生们也这样做，会有10-100x的人会阅读博客”。虽然这篇本科毕业论文不涉及发表，我也试图这样做。不仅是对">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/1.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/2.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/3.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/5.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/6.jpg">
-<meta property="og:image" content="http://yoursite.com/2018/09/20/text-classification/7.jpg">
 <meta property="article:published_time" content="2018-09-19T16:03:29.000Z">
-<meta property="article:modified_time" content="2018-09-20T06:25:07.000Z">
+<meta property="article:modified_time" content="2022-01-02T12:56:30.271Z">
 <meta property="article:author" content="D_double_h">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2018/09/20/text-classification/1.jpg">
 
 <link rel="canonical" href="http://yoursite.com/2018/09/20/text-classification/">
 
@@ -181,10 +173,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2018-09-20 00:03:29 / 修改时间：14:25:07" itemprop="dateCreated datePublished" datetime="2018-09-20T00:03:29+08:00">2018-09-20</time>
+              <time title="创建时间：2018-09-20 00:03:29" itemprop="dateCreated datePublished" datetime="2018-09-20T00:03:29+08:00">2018-09-20</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-01-02 20:56:30" itemprop="dateModified" datetime="2022-01-02T20:56:30+08:00">2022-01-02</time>
+              </span>
 
           
 
@@ -208,13 +206,9 @@
 </li>
 <li><p>算了，自己搞呗。最终采用网络爬虫的方法，利用selenium测试工具，模拟微博登录；设置了自动身份验证的判断。抓取了在微博页面可以直观看到的文本数据，同时也获取到了每条文本所对应的时间、设备等各类信息(如下图)。</p>
 </li>
-<li><p><img src="1.jpg" alt="figure1"></p>
-</li>
 </ul>
 <h1 id="信息提取"><a href="#信息提取" class="headerlink" title="信息提取"></a>信息提取</h1><ul>
 <li><p>因为后期要进行地理可视化，所以地址信息必不可少。这里强烈推荐采中科院计算机所的NLPIR系统。采用它对文本中的地名实体进行抽取,得到事件发生的地址（相关预处理在这里不赘述了，比如去无意义数据、中文分词等）。</p>
-</li>
-<li><p><img src="2.jpg" alt="figure2"></p>
 </li>
 <li><p>另外还需要将文本地址转为坐标，这里也不赘述，<a href="http://dh629.top/2018/05/18/excel/" target="_blank" rel="noopener">Excel地图插件-ExcelMap</a>这篇博文里有详细介绍。</p>
 </li>
@@ -224,23 +218,19 @@
 </li>
 <li><p>首先比较了LDA模型与BTM模型在处理文本分类问题上的差异。微博文本数据属于短文本，在多个数据集上结果表明BTM在这方面更有优势。所以就应用BTM模型对数据进行文本主题建模。对文档—主题相似度进行聚类从而完成分类，从而构建语料库。（具体原理这里不展开说了，感兴趣可以去查看论文）</p>
 </li>
-<li><p><img src="3.jpg" alt="figure3"></p>
-</li>
+</ul>
+<ul>
 <li><p>进行聚类分析的算法有很多，其中K-means聚类算法在众多聚类算法里属于比较简单的，属于基于一种基于距离的无监督聚类算法，实现起来也比较容易，效果也能够满足要求。但它的缺点是需要指定聚类个数。这里采用了斯坦福大学的Robert等教授提出了Gap Statistic方法。文中定义Gap值为：</p>
 <p>  Gap_n (k)=E_n^* (log⁡(W_k ) )-logW_k</p>
-</li>
-<li><p><img src="4.jpg" alt="figure4"></p>
 </li>
 <li><p>为了便于表达，将聚类范围缩小到1—10类。由Gap指标以及图所示，当类别数为9时，GAP值达到最高峰。所以9可以作为最佳聚类数。这样对原始文本做标签处理，就完成了语料库的建立。</p>
 </li>
 </ul>
 <h1 id="FastText模型"><a href="#FastText模型" class="headerlink" title="FastText模型"></a>FastText模型</h1><ul>
-<li><p>FastText是一个可伸缩解决方案的资料库，其目的是帮助创建文本表征和分类，并且可以为294种语言提供训练模型。深度学习FastText模型主要应用于构建词向量与文本分类，在许多文本分类问题上都有非常不错的表现，不仅具有良好的分类效果，而且具有优秀的分类效率，所以适用于大批量的数据样本。在各个方面都表现出了很强的能力（如：标签的预测、情感分析等），尤其是对于短文本分类具有很好的性能。针对FastText算法的具体内容就不展开说了，具体可见<a href="http://dh629.top/2018/05/18/page/" target="_blank" rel="noopener">基于深度学习的对文本分类的FastText模型</a>这篇博文。</p>
-</li>
-<li><p><img src="5.jpg" alt="figure5"></p>
-</li>
-<li><p>在本次课题中，使用以上步骤对原始数据（共5586条）进行人工标记后，将这些数据划分为九子类，选取其中50%作为模型训练集，50%作为模型测试集。文本文件的每一行都包含一个标签列表，其后是相应的文档。所有标签都以<strong>label</strong>前缀开始，这就是FastText如何识别什么是标签或什么是一个词。然后对模型进行训练，以预测文档中给定单词的标签。</p>
-</li>
+<li>FastText是一个可伸缩解决方案的资料库，其目的是帮助创建文本表征和分类，并且可以为294种语言提供训练模型。深度学习FastText模型主要应用于构建词向量与文本分类，在许多文本分类问题上都有非常不错的表现，不仅具有良好的分类效果，而且具有优秀的分类效率，所以适用于大批量的数据样本。在各个方面都表现出了很强的能力（如：标签的预测、情感分析等），尤其是对于短文本分类具有很好的性能。针对FastText算法的具体内容就不展开说了，具体可见<a href="http://dh629.top/2018/05/18/page/" target="_blank" rel="noopener">基于深度学习的对文本分类的FastText模型</a>这篇博文。</li>
+</ul>
+<ul>
+<li>在本次课题中，使用以上步骤对原始数据（共5586条）进行人工标记后，将这些数据划分为九子类，选取其中50%作为模型训练集，50%作为模型测试集。文本文件的每一行都包含一个标签列表，其后是相应的文档。所有标签都以__label__前缀开始，这就是FastText如何识别什么是标签或什么是一个词。然后对模型进行训练，以预测文档中给定单词的标签。</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">类别	P	R	F</span><br><span class="line">CLASS_ZERO	0.868421	0.970588	0.916667</span><br><span class="line">CLASS_ONE	0.684132	0.686186	0.685157</span><br><span class="line">CLASS_TWO	1.000000	1.000000	1.000000</span><br><span class="line">CLASS_THREE	1.000000	0.956522	0.977778</span><br><span class="line">CLASS_FOUR	0.875000	0.700000	0.777778</span><br><span class="line">CLASS_FIVE	0.857143	1.000000	0.923077</span><br><span class="line">CLASS_SIX	0.750487	0.738964	0.744681</span><br><span class="line">CLASS_SEVEN	0.882353	0.937500	0.909091</span><br><span class="line">CLASS_EIGHT	0.749285	0.748571	0.748928</span><br></pre></td></tr></table></figure>
 
@@ -248,11 +238,7 @@
 <li>由上表可知，测试集的平均准确度达到了74%，其中class_two、class_three具有百分之百的准确率，对于实验数据（数据量较少、质量相对较差的短文本数据）来说已经相当可观，由此可见针对短文本确实具有很高的效率。</li>
 </ul>
 <h1 id="可视化分析"><a href="#可视化分析" class="headerlink" title="可视化分析"></a>可视化分析</h1><ul>
-<li><p><img src="6.jpg" alt="figure6"></p>
-</li>
-<li><p>上图即为各文本数据所对应各类别事件的空间分布状况。同样第一类、第六类、第八类占大多数；第四类、第七类也相对较多。</p>
-</li>
-<li><p><img src="7.jpg" alt="figure7"></p>
+<li><p> 同样第一类、第六类、第八类占大多数；第四类、第七类也相对较多。</p>
 </li>
 <li><p>基于分类结果分别利用R语言调用wordcloud2包对各类别文本数据进行词云展示。由分类词云图可见，第0类是大多与小区建设塌陷有关的文本；第一类是地铁施工所造成的有关塌方事故的文本；第二类是北京西二旗路所对应的事件文本；第三类是劳斯莱斯轿车深陷大坑的事件；第四类是与货车有关的路面塌陷的事件文本；第五类是塌陷事件所对应的民警预警文本；第六类是为塌陷事件进行路面抢修的事件；第七类是电动车掉入大坑的事件文本；第八类是由于暴雨、积水等所造成的路面塌陷的事件文本。 </p>
 </li>
